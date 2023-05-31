@@ -1,0 +1,55 @@
+version: "3.1"
+
+intents:
+  - solicitar_saudacao
+  - informar_interesse_compra
+  - informar_interesse_aluguel
+  - solicitar_quantidade_quartos
+  - informar_faixa_preco_geral
+  - informar_bairro_seguro
+  - informar_tamanho_terreno
+  - informar_financiamento
+  - informar_email
+  - intencao_sair
+
+responses:
+  utter_solicitar_saudacao:
+  - text: "Olá! Você deseja comprar ou alugar um imóvel?"
+  - text: "Oi! Você está procurando comprar ou alugar um imóvel?"
+  - text: "Olá! Você tem interesse em imóveis para comprar ou alugar?"
+  - text: "Oi! Você está buscando opções para comprar ou alugar um imóvel?"
+
+  utter_informar_interesse_compra:
+  - text: "Ótimo! Por favor, me informe algumas caracteristicas que você deseja no imóvel. Qual o número de quartos esperado?"
+
+  utter_informar_interesse_aluguel:
+  - text: "Ótimo! Por favor, me informe algumas caracteristicas que você deseja no imóvel. Qual o número de quartos esperado?"
+
+  utter_solicitar_quantidade_quartos:
+  - text: "Entendi. Qual é a faixa de preço que você está considerando para o imóvel?\n 1 - Até R$100.000 \n 2 - Entre R$100.001 e R$300.000\n 3 - Mais de R$300.000"
+
+  utter_informar_faixa_preco_geral:
+  - text: "Anotado. Você gostaria que o bairro fosse seguro? Por favor, informe se a segurança do bairro é uma prioridade para você."
+
+  utter_informar_bairro_seguro:
+  - text: "Legal. Você tem alguma preferência em relação ao tamanho do terreno? Por favor, informe suas preferências quanto ao tamanho do terreno desejado."
+
+  utter_informar_tamanho_terreno:
+  - text: "Certo. Você pretende financiar o imóvel? Por favor, informe se você tem intenção de financiar a compra do imóvel."
+
+  utter_informar_financiamento:
+  - text: "Boa escolha. Por favor, informe seu endereço de e-mail para que possamos entrar em contato com você."
+
+  utter_informar_email:
+  - text: "Obrigado por fornecer todas as informações necessárias. Nossa equipe entrará em contato em breve para apresentar opções de imóveis que atendam aos seus critérios. Se você tiver alguma dúvida adicional, não hesite em perguntar. Até breve!"
+
+  utter_sair:
+  - text: "Espero ter sido um bom bot, adeus!"
+
+  utter_nao_entendi:
+  - text: "Não entendi, poderia responder novamente?"
+
+
+session_config:
+  session_expiration_time: 300
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,80 @@
+version: "3.1"
+
+nlu:
+- intent: solicitar_saudacao
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - boa tarde
+    - boa noite
+
+# interesses
+- intent: informar_interesse_compra
+  examples: |
+    - Eu quero comprar um imóvel.
+    - Estou interessado em fazer uma compra.
+    - Gostaria de obter informações sobre a compra de imóveis.
+
+- intent: informar_interesse_aluguel
+  examples: |
+    - Estou procurando um imóvel para alugar.
+    - Gostaria de informações sobre aluguel de imóveis.
+    - Estou interessado em alugar uma casa ou apartamento.
+
+# pedir quantidade de quartos
+- intent: solicitar_quantidade_quartos
+  examples: |
+    - 2 quartos
+    - Preciso de 3 quartos
+    - Quero um imóvel com 4 quartos
+    - Estou procurando um imóvel com pelo menos 1 quarto
+
+# faixa de preço
+- intent: informar_faixa_preco_geral
+  examples: |
+    - 1
+    - 2
+    - 3
+
+# segurança
+- intent: informar_bairro_seguro
+  examples: |
+    - Sim, a segurança do bairro é uma prioridade para mim.
+    - Gostaria que o bairro fosse seguro.
+    - A segurança é importante na escolha do imóvel.
+    - Não é uma prioridade para mim.
+    - A segurança não é o fator mais importante.
+    - Estou aberto a bairros menos seguros.
+
+# tamanho
+- intent: informar_tamanho_terreno
+  examples: |
+    - Gostaria de um terreno espaçoso.
+    - Estou procurando um terreno grande.
+    - O tamanho do terreno não é tão importante para mim.
+    - Prefiro um terreno pequeno e fácil de manter.
+
+# financiar
+- intent: informar_financiamento
+  examples: |
+    - Sim, pretendo financiar o imóvel.
+    - Estou pensando em fazer um financiamento.
+    - Não, pretendo pagar à vista.
+    - Não tenho certeza ainda sobre o financiamento.
+
+# email
+- intent: informar_email
+  examples: |
+    - Meu e-mail é exemplo@email.com
+    - Aqui está o meu endereço de e-mail: contato@email.com
+    - Posso fornecer meu e-mail: usuario@email.com
+    - usuario@email.com
+
+- intent: intencao_sair
+  examples: |
+    - Adeus
+    - Até mais
+    - Tchau
+    - Até logo
+    - Até a próxima

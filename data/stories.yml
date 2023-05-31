@@ -1,0 +1,45 @@
+version: "3.1"
+
+stories:
+
+- story: Caminho feliz compra
+  steps:
+  - intent: solicitar_saudacao # Olá
+  - action: utter_solicitar_saudacao # Olá! Você deseja comprar ou alugar um imóvel?
+
+  - intent: informar_interesse_compra # Comprar imovel
+  - action: utter_informar_interesse_compra # Ótimo! Por favor, me informe algumas caracteristicas que você deseja no imóvel. Qual o número de quartos esperado?
+
+  - intent: solicitar_quantidade_quartos # 4 quartos
+  - action: utter_solicitar_quantidade_quartos # Entendi. Qual é a faixa de preço que você está considerando para o imóvel?\n 1 - Até R$100.000 \n 2 - Entre R$100.001 e R$300.000\n 3 - Mais de R$300.000
+
+  - intent: informar_faixa_preco_geral # 1
+  - action: utter_informar_faixa_preco_geral # Anotado. Você gostaria que o bairro fosse seguro? Por favor, informe se a segurança do bairro é uma prioridade para você.
+
+  - intent: informar_bairro_seguro # Sim, a segurança do bairro é uma prioridade para mim.
+  - action: utter_informar_bairro_seguro # Legal. Você tem alguma preferência em relação ao tamanho do terreno? Por favor, informe suas preferências quanto ao tamanho do terreno desejado.
+
+  - intent: informar_tamanho_terreno # Gostaria de um terreno espaçoso
+  - action: utter_informar_tamanho_terreno # Certo. Você pretende financiar o imóvel? Por favor, informe se você tem intenção de financiar a compra do imóvel.
+
+  - intent: informar_financiamento # Sim, pretendo financiar o imóvel
+  - action: utter_informar_financiamento # Boa escolha. Por favor, informe seu endereço de e-mail para que possamos entrar em contato com você.
+
+  - intent: informar_email # Meu e-mail é exemplo@email.com
+  - action: utter_informar_email # Obrigado por fornecer todas as informações necessárias. Nossa equipe entrará em contato em breve para apresentar opções de imóveis que atendam aos seus critérios. Se você tiver alguma dúvida adicional, não hesite em perguntar. Até breve!
+
+# - story: Caminho triste compra
+#   steps:
+#   - intent: intencao_saudacao
+#   - action: utter_intencao_saudacao
+#   - intent: informar_interesse_compra
+#   - action: utter_nao_entendi
+
+# - story: Caminho triste compra 2
+#   steps:
+#   - intent: intencao_saudacao
+#   - action: utter_intencao_saudacao
+#   - intent: informar_interesse_compra
+#   - action: utter_informar_interesse_compra
+#   - intent: informar_caracteristicas_imovel
+#   - action: utter_nao_entendi

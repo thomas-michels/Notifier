@@ -1,0 +1,121 @@
+# #### This file contains tests to evaluate that your bot behaves as expected.
+# #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+# stories:
+# - story: Caminho feliz compra
+#   steps:
+#   - user: |
+#       ola
+#     intent: solicitar_saudacao
+#   - action: utter_solicitar_saudacao
+
+#   - user: |
+#       comprar imovel
+#     intent: informar_interesse_compra
+#   - action: utter_informar_interesse_compra
+
+#   - user: |
+#       4 quartos
+#     intent: informar_caracteristicas_imovel
+#   - action: utter_informar_caracteristicas_imovel
+
+#   - user: |
+#       1
+#     intent: informar_faixa_preco_geral
+#   - action: utter_informar_faixa_preco_geral
+
+#   - user: |
+#       Gostaria que o bairro fosse seguro.
+#     intent: informar_solicitar_bairro_seguro
+#   - action: utter_solicitar_bairro_seguro
+#   - user: |
+#       Estou procurando um terreno grande
+#     intent: informar_tamanho_terreno
+#   - action: utter_informar_tamanho_terreno
+
+#   - user: |
+#       Não, pretendo pagar à vista
+#     intent: informar_financiamento
+#   - action: utter_informar_financiamento
+
+#   - user: |
+#       meu email é thomas@gmail.com
+#     intent: informar_email
+#   - action: utter_informar_email
+
+# - story: happy path 2
+#   steps:
+#   - user: |
+#       hello there!
+#     intent: greet
+#   - action: utter_greet
+#   - user: |
+#       amazing
+#     intent: mood_great
+#   - action: utter_happy
+#   - user: |
+#       bye-bye!
+#     intent: goodbye
+#   - action: utter_goodbye
+
+# - story: sad path 1
+#   steps:
+#   - user: |
+#       hello
+#     intent: greet
+#   - action: utter_greet
+#   - user: |
+#       not good
+#     intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - user: |
+#       yes
+#     intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - user: |
+#       hello
+#     intent: greet
+#   - action: utter_greet
+#   - user: |
+#       not good
+#     intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - user: |
+#       not really
+#     intent: deny
+#   - action: utter_goodbye
+
+# - story: sad path 3
+#   steps:
+#   - user: |
+#       hi
+#     intent: greet
+#   - action: utter_greet
+#   - user: |
+#       very terrible
+#     intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - user: |
+#       no
+#     intent: deny
+#   - action: utter_goodbye
+
+# - story: say goodbye
+#   steps:
+#   - user: |
+#       bye-bye!
+#     intent: goodbye
+#   - action: utter_goodbye
+
+# - story: bot challenge
+#   steps:
+#   - user: |
+#       are you a bot?
+#     intent: bot_challenge
+#   - action: utter_iamabot
