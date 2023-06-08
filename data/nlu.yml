@@ -15,12 +15,14 @@ nlu:
     - Eu quero comprar um imóvel.
     - Estou interessado em fazer uma compra.
     - Gostaria de obter informações sobre a compra de imóveis.
+    - Comprar imovel
 
 - intent: informar_interesse_aluguel
   examples: |
     - Estou procurando um imóvel para alugar.
     - Gostaria de informações sobre aluguel de imóveis.
     - Estou interessado em alugar uma casa ou apartamento.
+    - Alugar imovel
 
 # pedir quantidade de quartos
 - intent: solicitar_quantidade_quartos
@@ -40,6 +42,7 @@ nlu:
 # segurança
 - intent: informar_bairro_seguro
   examples: |
+    - bairro seguro
     - Sim, a segurança do bairro é uma prioridade para mim.
     - Gostaria que o bairro fosse seguro.
     - A segurança é importante na escolha do imóvel.
@@ -50,6 +53,7 @@ nlu:
 # tamanho
 - intent: informar_tamanho_terreno
   examples: |
+    - terreno grande
     - Gostaria de um terreno espaçoso.
     - Estou procurando um terreno grande.
     - O tamanho do terreno não é tão importante para mim.
@@ -58,18 +62,18 @@ nlu:
 # financiar
 - intent: informar_financiamento
   examples: |
-    - Sim, pretendo financiar o imóvel.
-    - Estou pensando em fazer um financiamento.
-    - Não, pretendo pagar à vista.
-    - Não tenho certeza ainda sobre o financiamento.
+    - não
+    - tenho dinheiro
+    - vou pagar a vista
+    - pretendo financiar o imóvel.
 
 # email
 - intent: informar_email
   examples: |
-    - Meu e-mail é exemplo@email.com
-    - Aqui está o meu endereço de e-mail: contato@email.com
-    - Posso fornecer meu e-mail: usuario@email.com
-    - usuario@email.com
+    - Meu e-mail é <some_text>@<some_text>.com
+    - Aqui está o meu endereço de e-mail: <some_text>@<some_text>.com
+    - Posso fornecer meu e-mail: <some_text>@<some_text>.com
+    - <some_text>@<some_text>.com
 
 - intent: intencao_sair
   examples: |

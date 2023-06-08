@@ -1,6 +1,5 @@
 import discord
 import os
-import json
 import requests
 
 intents = discord.Intents.default()
@@ -18,24 +17,26 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-
+    
     if message.content.startswith('$rasa'):
-        # await message.channel.send(f'Hello {message.author.name}!')
         content_message = message.content.replace("$rasa ", "")
-        
-        raw_message = {
-            'sender': 'user',
-            'message': content_message
-        }
+        if content_message == "ping":
+            await message.channel.send("pong")
 
-        response = requests.post(url, json=raw_message)
+        else:
+            raw_message = {
+                'sender': message.author.name,
+                'message': content_message
+            }
 
-        # Obter a resposta do chatbot
-        bot_responses = response.json()
+            response = requests.post(url, json=raw_message)
 
-        # Exibir as respostas do chatbot
-        for bot_response in bot_responses:
-            await message.channel.send(bot_response['text'])
+            # Obter a resposta do chatbot
+            bot_responses = response.json()
+
+            # Exibir as respostas do chatbot
+            for bot_response in bot_responses:
+                await message.channel.send(bot_response['text'])
         
 
 client.run(os.getenv("TOKEN"))
